@@ -2,9 +2,19 @@
 # -*- coding:utf-8 -*-
 
 import argparse
+import sys
 
 from sub.search import search
 from sub.get import get
+
+# Check the gnttb version
+import gnttb
+
+gnttb_neededVersion = '0.1'
+if gnttb.__version__ < gnttb_neededVersion:
+    print("You are using version {} of gnttb, but at least version {} is needed.".format(gnttb.__version__, gnttb_neededVersion))
+    print("Please update gnttb (pip3 install --user --upgrade gnttb-a2ohm).")
+    sys.exit()
 
 # Parse arguments
 parser = argparse.ArgumentParser(description="CLI of the Greek New Testament toolbox.")
