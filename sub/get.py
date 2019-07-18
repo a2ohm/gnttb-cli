@@ -6,7 +6,6 @@ Define the get sub-command.
 """
 
 import gnttb.get
-import gnttb.sblgnt
 
 from tools import bcv
 
