@@ -8,6 +8,8 @@ Define the search sub-command.
 import gnttb.search
 import gnttb.sblgnt
 
+from tools import bcv
+
 class color:
    PURPLE = '\033[95m'
    CYAN = '\033[96m'
@@ -20,11 +22,11 @@ class color:
    UNDERLINE = '\033[4m'
    END = '\033[0m'
 
-def bcv2str(bcv):
-    """Convert a bcv into a string using the BJ convention.
-    """
-
-    return '{} {}, {}'.format(gnttb.sblgnt.sblgnt_books[bcv[0:2]][1], int(bcv[2:4]), int(bcv[4:6]))
+# def bcv2str(bcv):
+#     """Convert a bcv into a string using the BJ convention.
+#     """
+# 
+#     return '{} {}, {}'.format(gnttb.sblgnt.sblgnt_books[bcv[0:2]][1], int(bcv[2:4]), int(bcv[4:6]))
 
 def emphasizeLemmas(verse, lemmas, clr = color.CYAN):
     """Emphasize lemmas in the given verse.
@@ -39,4 +41,4 @@ def search(args):
     """
 
     for r in gnttb.search.search(args.lemma):
-        print('{} : {}'.format(bcv2str(r.morph_words[0]['bcv']), emphasizeLemmas(r, [args.lemma,])))
+        print('{} : {}'.format(bcv.bcv2str(r.morph_words[0]['bcv']), emphasizeLemmas(r, [args.lemma,])))
