@@ -9,13 +9,13 @@ import gnttb.search
 import gnttb.sblgnt
 
 from tools import bcv
-from tools import colors
+from tools.colors import colors
 
-def emphasizeLemmas(verse, lemmas, clr = colors.colors.CYAN):
+def emphasizeLemmas(verse, lemmas, clr = colors.fg.CYAN):
     """Emphasize lemmas in the given verse.
     """
 
-    return ' '.join([clr + w['text'] + colors.colors.END if w['lemma'] in lemmas else w['text'] for w in verse.morph_words])
+    return ' '.join([clr + w['text'] + colors.END if w['lemma'] in lemmas else w['text'] for w in verse.morph_words])
 
 
 def search(args):
