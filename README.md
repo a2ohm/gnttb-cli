@@ -1,6 +1,8 @@
 # gnttb-cli
 Command line interface for the Greek New Testament toolbox.
 
+![screenshot](assets/gnttb-cli_20190720.png)
+
 ## Installation
 
 1. Install the Greek New Testament toolbox ([gnttb](https://github.com/a2ohm/gnttb)).
