@@ -15,3 +15,17 @@ General help.
 Help on a given sub-command (here, the search sub-command).
 
     ./gnttb-cli.py search --help
+
+### About bcv
+
+bcv stands for "book, chapter, verse". It is a convenient way to refer
+to a verse in the New Testament.
+
+A bcv is a six-digit number. The first two designate the book (following
+the canonical order from 01 to 27), the next two the chapter, the last
+two the verse.
+
+Examples:
+
+* 011701 --> Mt 17, 1
+* 090220 --> Ga 2, 20

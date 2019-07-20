@@ -17,18 +17,20 @@ if gnttb.__version__ < gnttb_neededVersion:
     print("Please update gnttb (see its documentation at https://github.com/a2ohm/gnttb).")
     sys.exit()
 
+about_bcv = "Notice: learn about bcv in the README.md file."
+
 # Parse arguments
 parser = argparse.ArgumentParser(description="CLI of the Greek New Testament toolbox.")
 subparsers = parser.add_subparsers()
 
 # Create the parser for the 'compare' command
-parser_compare = subparsers.add_parser('compare', help='compare two verses')
+parser_compare = subparsers.add_parser('compare', help='compare two verses', epilog=about_bcv)
 parser_compare.add_argument('bcv1', help='bcv of the first verse')
 parser_compare.add_argument('bcv2', help='bcv of the second verse')
 parser_compare.set_defaults(func=compare) 
 
 # Create the parser for the 'get' command
-parser_get = subparsers.add_parser('get', help='return a verse from the New Testament')
+parser_get = subparsers.add_parser('get', help='return a verse from the New Testament', epilog=about_bcv)
 parser_get.add_argument('bcv', help='bcv of the verse')
 parser_get.set_defaults(func=get) 
 
