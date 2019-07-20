@@ -76,7 +76,7 @@ def compare(args):
                     ww1 = "{{space}}{:{width}}".format(ww1, width = wSize)
                     ww2 = "{{space}}{:{width}}".format(ww2, width = wSize)
 
-            else:
+            elif w1['lemma'] == w2['lemma']:
                 # Same lemma: light emphasis
                 if isUsingColor == 0:
                     isUsingColor = 1
@@ -88,6 +88,14 @@ def compare(args):
                     ww1 = "{}{{space}}{}{:{width}}".format(colors.END, fg_emph, ww1, width = wSize)
                     ww2 = "{}{{space}}{}{:{width}}".format(colors.END, fg_emph, ww2, width = wSize)
 
+                else:
+                    ww1 = "{{space}}{:{width}}".format(ww1, width = wSize)
+                    ww2 = "{{space}}{:{width}}".format(ww2, width = wSize)
+            else:
+                if isUsingColor > 0:
+                    isUsingColor = 0
+                    ww1 = "{}{{space}}{:{width}}".format(colors.END, ww1, width = wSize)
+                    ww2 = "{}{{space}}{:{width}}".format(colors.END, ww2, width = wSize)
                 else:
                     ww1 = "{{space}}{:{width}}".format(ww1, width = wSize)
                     ww2 = "{{space}}{:{width}}".format(ww2, width = wSize)
