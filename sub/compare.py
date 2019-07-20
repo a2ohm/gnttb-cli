@@ -39,7 +39,7 @@ def compare(args):
 
         wSize = max(len(ww1), len(ww2))
 
-        if buffSize + wSize > 42:
+        if buffSize + wSize + 1 > 42:
             # News words do not fit in width.
             # So display current buffers and reset them
             # to create a new line.
