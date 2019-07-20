@@ -14,7 +14,7 @@ import gnttb
 gnttb_neededVersion = '0.2'
 if gnttb.__version__ < gnttb_neededVersion:
     print("You are using version {} of gnttb, but at least version {} is needed.".format(gnttb.__version__, gnttb_neededVersion))
-    print("Please update gnttb (pip3 install --user --upgrade gnttb-a2ohm).")
+    print("Please update gnttb (see its documentation at https://github.com/a2ohm/gnttb).")
     sys.exit()
 
 # Parse arguments
