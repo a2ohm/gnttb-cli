@@ -14,4 +14,4 @@ def get(args):
     """
 
     verse = gnttb.get.get(args.bcv)
-    print('{} : {}'.format(bcv.bcv2str(args.bcv), verse))
+    print('{} : {}'.format(bcv.bcv2str(verse.bcv), verse))

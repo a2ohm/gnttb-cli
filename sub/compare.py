@@ -30,7 +30,7 @@ def compare(args):
 
     isUsingColor = 0    # 0: no, 1: fg, 2: bg
 
-    print(" {c_emph}{:^{width}}{c_end} | {c_emph}{:^{width}}{c_end}".format(bcv.bcv2str(args.bcv1), bcv.bcv2str(args.bcv2),
+    print(" {c_emph}{:^{width}}{c_end} | {c_emph}{:^{width}}{c_end}".format(bcv.bcv2str(verse1.bcv), bcv.bcv2str(verse2.bcv),
         c_emph = colors.BOLD, c_end = colors.END, width = colWidth))
 
     for w1, w2 in zip(averse1, averse2):
