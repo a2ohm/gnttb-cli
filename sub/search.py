@@ -23,5 +23,11 @@ def search(args):
     in the New Testament.
     """
 
-    for r in gnttb.search.search(args.lemma):
-        print('{} : {}'.format(bcv.bcv2str(r.morph_words[0]['bcv']), emphasizeLemmas(r, [args.lemma,])))
+    for book_num, verses in gnttb.search.search(args.lemma):
+        print('{} ({} verse{})'.format(getattr(gnttb.sblgnt.sblgnt_books[book_num], 'BJ'), len(verses), 's' if len(verses) > 1 else ''))
+        print('---')
+
+        for v in verses:
+            print('{} : {}'.format(bcv.bcv2str(v.morph_words[0]['bcv']), emphasizeLemmas(v, [args.lemma,])))
+
+        print()
