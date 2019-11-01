@@ -35,7 +35,7 @@ def search(args):
         books.insert(0, '02')
         books.insert(0, '01')
 
-    for book_num, verses in gnttb.search.search(args.lemma, books):
+    for book_num, verses in gnttb.search.search(args.lemma, books = books):
         print('{} ({} verse{})'.format(getattr(gnttb.sblgnt.sblgnt_books[book_num], 'BJ'), len(verses), 's' if len(verses) > 1 else ''))
         print('---')
 
