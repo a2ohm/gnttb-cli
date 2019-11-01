@@ -18,6 +18,17 @@ Help on a given sub-command (here, the search sub-command).
 
     ./gnttb-cli.py search --help
 
+### Search
+
+    ./gnttb-cli.py search θάλασσα --> search θάλασσα in all the NT
+    id is 01).
+
+    ./gnttb-cli.py search -b gospels θάλασσα --> search θάλασσα in the
+    four gospels
+    
+    ./gnttb-cli.py search -b gospels -b 27 θάλασσα --> search θάλασσα in
+    the four gospels and in the book of Revelation (whose id is 27)
+
 ### About bcv
 
 bcv stands for "book, chapter, verse". It is a convenient way to refer

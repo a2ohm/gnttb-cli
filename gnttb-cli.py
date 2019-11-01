@@ -35,7 +35,10 @@ parser_get.add_argument('bcv', help='bcv of the group of verses')
 parser_get.set_defaults(func=get) 
 
 # Create the parser for the 'search' command
-parser_search = subparsers.add_parser('search', help='search in the New Testament')
+parser_search = subparsers.add_parser('search',
+        help='search in the New Testament',
+        epilog='Notice: see examples of the search command in the README.md file.')
+parser_search.add_argument('--book', '-b', dest='books', default=[], action='append', help='limit the search to some books given their ids')
 parser_search.add_argument('lemma', help='return the concorance of lemma in the New Testament')
 parser_search.set_defaults(func=search) 
 
