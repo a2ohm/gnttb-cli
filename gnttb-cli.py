@@ -11,7 +11,7 @@ from sub.search import search
 # Check the gnttb version
 import gnttb
 
-gnttb_neededVersion = '1.0'
+gnttb_neededVersion = '1.2'
 if gnttb.__version__ < gnttb_neededVersion:
     print("You are using version {} of gnttb, but at least version {} is needed.".format(gnttb.__version__, gnttb_neededVersion))
     print("Please update gnttb (see its documentation at https://github.com/a2ohm/gnttb).")
