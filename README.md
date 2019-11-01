@@ -20,17 +20,23 @@ Help on a given sub-command (here, the search sub-command).
 
 ### Search
 
-    ./gnttb-cli.py search θάλασσα --> search θάλασσα in all the NT
-    id is 01).
+Search θάλασσα in all the NT.
 
-    ./gnttb-cli.py search -b gospels θάλασσα --> search θάλασσα in the
-    four gospels
-    
-    ./gnttb-cli.py search -b gospels -b 27 θάλασσα --> search θάλασσα in
-    the four gospels and in the book of Revelation (whose id is 27)
+    ./gnttb-cli.py search θάλασσα
 
-    ./gnttb-cli.py search -b 01 --ccatParse "****N***" θάλασσα -->
-    search θάλασσα at the nominative case in the book of Matthiew 
+Search θάλασσα in the four gospels.
+
+    ./gnttb-cli.py search -b 01 -b 02 -b 03 -b 04 θάλασσα
+    ./gnttb-cli.py search -b gospels θάλασσα
+
+Search θάλασσα in the four gospels and in the book of Revelation (whose
+id is 27).
+
+    ./gnttb-cli.py search -b gospels -b 27 θάλασσα
+
+Search θάλασσα at the nominative case in the book of Matthiwx.
+
+    ./gnttb-cli.py search -b 01 --ccatParse "****N***" θάλασσα
 
 ### About bcv
 
