@@ -29,6 +29,9 @@ Help on a given sub-command (here, the search sub-command).
     ./gnttb-cli.py search -b gospels -b 27 θάλασσα --> search θάλασσα in
     the four gospels and in the book of Revelation (whose id is 27)
 
+    ./gnttb-cli.py search -b 01 --ccatParse "****N***" θάλασσα -->
+    search θάλασσα at the nominative case in the book of Matthiew 
+
 ### About bcv
 
 bcv stands for "book, chapter, verse". It is a convenient way to refer
